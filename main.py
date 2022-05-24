@@ -3,14 +3,11 @@ import panflute
 
 headers = dict()
 
-
 def upper_str(element, _):
     if isinstance(element, panflute.Str):
         element.text = element.text.upper()
 
-
 def my_filter(element, _):
-    # header warning
     if isinstance(element, panflute.Header):
         text = panflute.stringify(element)
         if text in headers.keys():  # if repeated
@@ -19,15 +16,11 @@ def my_filter(element, _):
                 headers[text] = True
         else:
             headers[text] = False
-
-    # bold text
-    if isinstance(element, panflute.Str) and element.text.lower() == "bold":
-        return panflute.Strong(element)
-
-    # header to upper
     if isinstance(element, panflute.Header) and element.level <= 3:
         return element.walk(upper_str)
 
+    if isinstance(element, panflute.Str) and element.text.lower() == "bold":
+        return panflute.Strong(element)
 
 def main(doc=None):
     return panflute.run_filter(my_filter, doc=doc)
