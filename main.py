@@ -8,6 +8,10 @@ def upper_str(element, _):
         element.text = element.text.upper()
 
 def my_filter(element, _):
+    if isinstance(element, panflute.Header) and element.level <= 3:
+        return element.walk(upper_str)
+    if isinstance(element, panflute.Str) and element.text.lower() == "bold":
+        return panflute.Strong(element)
     if isinstance(element, panflute.Header):
         text = panflute.stringify(element)
         if text in headers.keys():  # if repeated
@@ -16,11 +20,6 @@ def my_filter(element, _):
                 headers[text] = True
         else:
             headers[text] = False
-    if isinstance(element, panflute.Header) and element.level <= 3:
-        return element.walk(upper_str)
-
-    if isinstance(element, panflute.Str) and element.text.lower() == "bold":
-        return panflute.Strong(element)
 
 def main(doc=None):
     return panflute.run_filter(my_filter, doc=doc)
