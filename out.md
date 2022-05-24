@@ -1,21 +1,13 @@
-1 HEADER
+Heading level 1 repeated
 
-AAAAAAAAAAAAAAAAAA
+Heading level 1 repeated
 
-2 HEADER
+Heading level 2 repeated
 
-bold.
+bOld
 
-Bold
+not_bold
 
-bold
+cursive bold
 
-aaa
-
-bbb
-
-Bold
-
-3 HEADER
-
-ZZZZZ
+Some text with bold and notbold words
