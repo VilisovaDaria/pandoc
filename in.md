@@ -2,9 +2,9 @@
 
 **heading 1 repeated**
 
-* bOld
+* bоld
 * 
-* not_bold
+* notbold
 * 
 * _cursive bold_
 * 
