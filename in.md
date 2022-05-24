@@ -1,6 +1,6 @@
-**Heading level 1**
+**heading 1 repeated**
 
-**Heading level 1**
+**heading 1 repeated**
 
 * bOld
 * 
