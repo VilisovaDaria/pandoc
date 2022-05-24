@@ -14,8 +14,8 @@ def my_filter(element, _):
         return panflute.Strong(element)
     if isinstance(element, panflute.Header):
         text = panflute.stringify(element)
-        if text in headers.keys():  # if repeated
-            if not headers[text]:  # if we didn't warn about this text
+        if text in headers.keys():  
+            if not headers[text]: 
                 sys.stderr.write(f"Header repeated: \"{text}\"")
                 headers[text] = True
         else:
