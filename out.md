@@ -1,10 +1,10 @@
-**HEADING LEVEL 1**
+**HEADING 1 REPEATED**
 
-**HEADING LEVEL 1**
+**HEADING 1 REPEATED**
 
-* **bOld**
+* **bold**
 * 
-* not_bold
+* notbold
 * 
 * _cursive **bold**_
 * 
