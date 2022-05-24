@@ -1,13 +1,12 @@
-Heading level 1 repeated
+**HEADING LEVEL 1
 
-Heading level 1 repeated
+HEADING LEVEL 1**
 
-Heading level 2 repeated
-
-bOld
-
-not_bold
-
-cursive bold
-
-Some text with bold and notbold words
+* **bOld**
+* 
+* not_bold
+* 
+* _cursive **bold**_
+* 
+* Some text with **bold** and notbold words
+* 
